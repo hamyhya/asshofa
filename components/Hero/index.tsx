@@ -8,7 +8,11 @@ const Hero = () => {
     e.preventDefault();
   };
 
-  const isMobile = window.innerWidth <= 800;
+  let isMobile = false
+
+  useEffect(() => {
+    isMobile = window.innerWidth <= 800;
+  }, [])
 
   return (
     <>
