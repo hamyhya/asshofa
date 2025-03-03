@@ -8,10 +8,10 @@ const Hero = () => {
     e.preventDefault();
   };
 
-  let isMobile = false
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    isMobile = window.innerWidth <= 800;
+    setIsMobile(window.innerWidth <= 800)
   }, [])
 
   return (
